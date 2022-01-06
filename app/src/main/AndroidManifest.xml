@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cegep.sportify">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".SportifyApp"
+        android:allowBackup="true"
+        android:icon="@drawable/userlogo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/userlogo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Sportify"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".details.productdetails.ProductDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".details.equipmentdetails.EquipmentDetailsActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".SavedItems.ViewSaveditemsActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".OrderActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SavedAddressActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SavedCardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".Splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".SearchAddressActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".checkout.ShoppingCartActivity"
+            android:exported="true" />
+        <activity
+            android:name=".checkout.AddressActivity"
+            android:exported="true" />
+        <activity
+            android:name=".checkout.ShippingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".checkout.PaymentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".search.SearchActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>
